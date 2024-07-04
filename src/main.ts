@@ -21,6 +21,12 @@ const drawHorizontalLine = (x:number, y:number, length: number) => {
   }
 }
 
+const drawVerticalLine = (x:number, y:number, length: number) => {
+  for (let i = 0; i < length; i++) {
+    drawDot(x, y + i);
+  }
+}
+
 // draw head
 drawRectangle(0, 0, 20, 8);
 
