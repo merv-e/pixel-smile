@@ -28,8 +28,11 @@ This function initializes the array `imageData` with the `false` values, effecti
 
 ## Visual Output
 
-Here is what the output looks like in console:
-![Console Pixel Smiley](/src/assets/pixel-smile.jpg?raw=true "Pixel Smile")
+Here is what the output looks like in console: 
+<br><br>
+<p align="center">
+<img src="/src/assets/pixel-smile.jpg?raw=true" alt="Console Pixel Smiley" title="Pixel Smile">
+</p>
 
 ## Unleash Your Creativity!
 
