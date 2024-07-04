@@ -41,7 +41,7 @@ function drawRectangle(
  * @param y - The vertical position within
  * the image.
  */
-function isPointInImage(x: number, y?: number): string {
+function isPointInImage(x: number, y: number) {
   return x >= 0 && x < imageWidth && y >= 0 && y < imageHeight;
 }
 
@@ -52,7 +52,7 @@ function isPointInImage(x: number, y?: number): string {
  * @param offChar - Character to render an
  * "off" pixel with.
  */
-function outputImage(onChar = "X", offChar) {
+function outputImage(onChar = "X", offChar = " ") {
   let text = "";
 
   for (let i = 0; i < imageData.length; i++) {
