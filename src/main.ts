@@ -60,7 +60,7 @@ function outputImage(onChar = "X", offChar = " ") {
       text += "\n"; // new line
     }
 
-    text += imageData[i] ? onChar : offChar * 2;
+    text += imageData[i] ? onChar : offChar;
   }
 
   console.log(text);
