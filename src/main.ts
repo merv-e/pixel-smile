@@ -3,6 +3,18 @@ const imageWidth = 20;
 const imageHeight = 8;
 const imageData = createImageData();
 
+/**
+ * Returns ---
+* @param x - The first input number
+* @param y - The second input number
+* @returns ---
+ */
+const drawDot = (x:number, y:number) => {
+  if (isPointInImage(x,y)) {
+    imageData[y * imageWidth + x] = true;
+  }
+}
+
 // draw head
 drawRectangle(0, 0, 20, 8);
 
@@ -13,10 +25,11 @@ drawDot(12, 2);
 // smile
 drawDot(4, 4);
 drawHorizontalLine(4, 5, 12);
-drawDot(15, "4");
+drawDot(15, 4);
 
 // output what we drew to the console
 outputImage();
+
 
 function drawRectangle(
   x: number,
@@ -33,6 +46,7 @@ function drawRectangle(
   // right
   drawVerticalLine(x + width - 1, y, height);
 }
+
 
 /**
  * Gets if the provided point is in the image.
