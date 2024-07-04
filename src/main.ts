@@ -4,10 +4,10 @@ const imageHeight = 8;
 const imageData = createImageData();
 
 /**
- * Returns ---
-* @param x - The first input number
-* @param y - The second input number
-* @returns ---
+ * Attempts to draw a pixel ("dot") on the image at the specified (x, y) position. If the specified position is within the boundaries of the image, sets the corresponding element in the `imageData` array to `true` (pixel on). If the specified position is outside of the image boundaries, does nothing.
+ 
+ * @param x - The x (horizontal) coordinate of the pixel to draw.
+ * @param y - The y (vertical) coordinate of the pixel to draw.
  */
 const drawDot = (x:number, y:number) => {
   if (isPointInImage(x,y)) {
@@ -15,12 +15,30 @@ const drawDot = (x:number, y:number) => {
   }
 }
 
+/**
+* Draws a horizontal line on the image starting from the specified (x, y) position, for the specified length. 
+* Uses the `drawDot` function to draw each dot of the line.
+* If a dot position is outside of the image boundaries, does nothing for that dot.
+
+* @param x - The x (horizontal) coordinate of the starting point of the line.
+* @param y - The y (vertical) coordinate of the starting point of the line.
+* @param length - The length of the line to draw in pixels.
+*/
 const drawHorizontalLine = (x:number, y:number, length: number) => {
   for (let i = 0; i < length; i++) {
     drawDot(x + i, y);
   }
 }
 
+/**
+* Draws a vertical line on the image starting from the specified (x, y) position, for the specified length.
+* Uses the `drawDot` function to draw each dot of the line.
+* If a dot position is outside of the image boundaries, does nothing for that dot.
+* 
+* @param x - The x (horizontal) coordinate of the starting point of the line.
+* @param y - The y (vertical) coordinate of the starting point of the line.
+* @param length - The length of the line to draw in pixels.
+*/
 const drawVerticalLine = (x:number, y:number, length: number) => {
   for (let i = 0; i < length; i++) {
     drawDot(x, y + i);
